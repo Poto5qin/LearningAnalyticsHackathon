@@ -302,7 +302,6 @@ export {
   FOOTER,
   Prizeinfo,
   sponsorLogos,
-  TeamInfo,
   JudgesInfo,
   frequentlyAskedQuestions,
   schedule,
