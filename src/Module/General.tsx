@@ -299,7 +299,6 @@ const sponsorLogos = [
 export {
   TOP_SECTION,
   MIDDLE_SECTION,
-  SOCIALS,
   FOOTER,
   Prizeinfo,
   sponsorLogos,
