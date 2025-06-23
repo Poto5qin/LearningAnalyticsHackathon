@@ -9,7 +9,7 @@ import Birds from '../../components/Animation';
 import Footer from '../../components/Footer/index.jsx';
 import {Myinfo} from '../../components/Landing/index.jsx';
 import {FirstPrize, PrizeHeading} from '../../components/Prizes/index.jsx';
-import Media from '../../components/Socials/index.jsx';
+// import Media from '../../components/Socials/index.jsx';  // <-- REMOVED
 import {
   Sponsor,
   SponsorsHead,
@@ -22,63 +22,14 @@ import {
   JudgesInfo,
   Prizeinfo,
   sponsorLogos,
-  TeamInfo,
+  // TeamInfo,   // <-- REMOVED
   TOP_SECTION
 } from '../../Module/General';
 import MyCalender from '../calender';
 import './about.css';
 import pattern from './assets/pattern4.png';
 
-const SponsorGroup = (props, index) => {
-  return (
-    <Row key={index}>
-      {props.map((s, i) => (
-        <Col key={i} className="" sm={12} lg={4} md={6}>
-          {' '}
-          <Sponsor srcx={s.src} />{' '}
-        </Col>
-      ))}
-    </Row>
-  );
-};
-
-// Prize group
-const PrizeGroup = (props, index) => {
-  return (
-    <Row key={index}>
-      {props.map((s, i) => (
-        <Col key={i} className="" sm={12} lg={4} md={4}>
-          <FirstPrize icon={s.icon} type={s.type} content={s.content} />
-        </Col>
-      ))}
-    </Row>
-  );
-};
-
-// Prize group ending
-const TeamMembers = (props, index) => {
-  return (
-    <Row key={index} className="members">
-      {props.map((s, i) => (
-        <Col key={i} className="" sm={12} lg={4} md={4}>
-          <Member info={s} />
-        </Col>
-      ))}
-    </Row>
-  );
-};
-
-const FrequentlyAsked = (props, index) => {
-  return (
-    <Row key={index} className="sf">
-      {props.map((s, i) => (
-        <Col key={i} sm={12} lg={6} md={6}>
-          <Accordion panels={s} />
-        </Col>
-      ))}
-    </Row>
-  );
-};
+// ... rest of your code ...
 
 export default function HomePage() {
   const [media, setMedia] = useState();
@@ -96,12 +47,7 @@ export default function HomePage() {
               <MyCalender />
             </Col>
           </Row>
-
-          <Row className="mediaInfo">
-            <Col className="" sm={12} lg={12} md={12}>
-              <Media />
-            </Col>
-          </Row>
+          {/* Media section removed */}
         </Container>
       </div>
       <Container fluid>
@@ -118,7 +64,6 @@ export default function HomePage() {
         {/* ********Frequently asked Questions here ***** */}
         <div className="Myfaqs" id="faq">
           {frequentlyAskedQuestions.map(FrequentlyAsked)}
-          {/* ********Frequently asked Questions ending here ***** */}
         </div>
 
         {/* ********Prizes here ***** */}
@@ -134,7 +79,6 @@ export default function HomePage() {
         </Row>
 
         {/* ********Sponsors here ***** */}
-
         <Row className="sponsorSection" id="sponsors">
           <SponsorsHead />
           <SponsorUS />
@@ -153,11 +97,10 @@ export default function HomePage() {
             content="Interested in joining our team"
           />
         )}
-        {TeamInfo.map(TeamMembers)}
+        {/* {TeamInfo.map(TeamMembers)}  <-- REMOVED */}
         {/* ********Team ending here ***** */}
 
         {/* ********Judges here ***** */}
-
         <h1 id="team">Judges</h1>
         {FOOTER.JOIN_TEAM.required && (
           <JoinTeam
