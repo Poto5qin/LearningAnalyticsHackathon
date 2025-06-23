@@ -1,4 +1,4 @@
-import {SOCIALS, TOP_SECTION} from '../../Module/General';
+import {TOP_SECTION} from '../../Module/General';
 import MytypedComponent from '../Typed/index.js';
 import './style.css';
 
@@ -28,24 +28,12 @@ const Myinfo = () => {
     <div className="Myinfo">
       <About />
       <p> {TOP_SECTION.SHORT_DESCRIPTION}</p>
-      <div className="join_dis">
-        <a rel="noreferrer" target="_blank" href={SOCIALS.discord}>
-          <Btn
-            ico="fab fa-2x fa-discord"
-            class="join_disco"
-            type="Join our discord"
-            overlay="Click the link"
-          />
-        </a>
-      </div>
+      {/* Removed Discord button since SOCIALS is gone */}
       <div className="buttom-group">
         <a href={TOP_SECTION.JUDGES_FORM_LINK}>
-          {' '}
           <Btn class="sponsor_btn" type="Judges" overlay="Fill the form" />
         </a>
-
         <a href={TOP_SECTION.HACKERS_REGISTRATION_FORM_LINK}>
-          {' '}
           <Btn
             class="register"
             type="Register "
