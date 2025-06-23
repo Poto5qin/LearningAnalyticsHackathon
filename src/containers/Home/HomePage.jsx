@@ -29,7 +29,46 @@ import MyCalender from '../calender';
 import './about.css';
 import pattern from './assets/pattern4.png';
 
-// ... rest of your code ...
+// Helper components/functions
+const FrequentlyAsked = (props, index) => (
+  <Row key={index} className="sf">
+    {props.map((s, i) => (
+      <Col key={i} sm={12} lg={6} md={6}>
+        <Accordion panels={s} />
+      </Col>
+    ))}
+  </Row>
+);
+
+const PrizeGroup = (props, index) => (
+  <Row key={index}>
+    {props.map((s, i) => (
+      <Col key={i} className="" sm={12} lg={4} md={4}>
+        <FirstPrize icon={s.icon} type={s.type} content={s.content} />
+      </Col>
+    ))}
+  </Row>
+);
+
+const SponsorGroup = (props, index) => (
+  <Row key={index}>
+    {props.map((s, i) => (
+      <Col key={i} className="" sm={12} lg={4} md={6}>
+        <Sponsor srcx={s.src} />
+      </Col>
+    ))}
+  </Row>
+);
+
+const TeamMembers = (props, index) => (
+  <Row key={index} className="members">
+    {props.map((s, i) => (
+      <Col key={i} className="" sm={12} lg={4} md={4}>
+        <Member info={s} />
+      </Col>
+    ))}
+  </Row>
+);
 
 export default function HomePage() {
   const [media, setMedia] = useState();
