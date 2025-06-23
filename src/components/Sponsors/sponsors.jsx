@@ -1,4 +1,3 @@
-import {SOCIALS} from '../../Module/General';
 import {Btn} from '../Landing/index.jsx';
 import './sponsors.scss';
 
@@ -17,8 +16,8 @@ function Sponsor(props) {
 function SponsorUS() {
   return (
     <div className="joinT sponsorUS">
-      <h3>Interested in Sponsoring </h3>
-      <a href={SOCIALS.email}>
+      <h3>Interested in Sponsoring</h3>
+      <a href="mailto:youremail@example.com">
         <Btn className="sponsor_btn" type="Sponsor us" overlay="Send a mail" />
       </a>{' '}
     </div>
