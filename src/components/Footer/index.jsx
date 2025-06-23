@@ -1,13 +1,7 @@
 import {useEffect, useState} from 'react';
-import {FOOTER, SOCIALS, TOP_SECTION} from '../../Module/General';
+import {FOOTER, TOP_SECTION} from '../../Module/General';
 import {Btn} from '../Landing/index.jsx';
 import cross from './assets/cross.svg';
-import DevPost from './assets/icons8-dev-post.svg';
-import Dis from './assets/icons8-discord.svg';
-import Insta from './assets/icons8-instagram.svg';
-import Linked from './assets/icons8-linkedin-2.svg';
-import Mail from './assets/icons8-mail.svg';
-import Twitter from './assets/icons8-twitter.svg';
 import PrivacyPolicy from './assets/Privacy policy.pdf';
 import TermsOfUse from './assets/Terms of use.pdf';
 //------------------------------------------------------------------
@@ -24,7 +18,7 @@ const GithubTemplate = ({hideTemplate}) => {
           discussions, and career sessions!
         </p>
       </div>
-      <img onClick={hideTemplate} src={cross} />
+      <img onClick={hideTemplate} src={cross} alt="close" />
     </div>
   );
 };
@@ -49,43 +43,13 @@ const Footer = () => {
   return (
     <div>
       <div className="footer">
-        <div className="social-icons-container">
-          <div className="social-icon">
-            <a rel="noreferrer" target="_blank" href={SOCIALS.instagram}>
-              <img src={Insta} alt="" />
-            </a>
-          </div>
-          <div className="social-icon">
-            <a rel="noreferrer" target="_blank" href={SOCIALS.discord}>
-              <img src={Dis} alt="" />
-            </a>
-          </div>
-          <div className="social-icon">
-            <a rel="noreferrer" target="_blank" href={SOCIALS.linkedin}>
-              <img src={Linked} alt="" />
-            </a>
-          </div>
-          <div className="social-icon">
-            <a rel="noreferrer" target="_blank" href={SOCIALS.email}>
-              <img src={Mail} alt="" />
-            </a>
-          </div>
-          <div className="social-icon">
-            <a rel="noreferrer" target="_blank" href={SOCIALS.twitter}>
-              <img src={Twitter} alt="" />
-            </a>
-          </div>
-          <div className="social-icon">
-            <a rel="noreferrer" target="_blank" href={SOCIALS.devpost}>
-              <img src={DevPost} alt="" />
-            </a>
-          </div>
-        </div>
+        {/* Removed social-icons-container since SOCIALS is gone */}
+
         <div className="Register_a">
           <a href={TOP_SECTION.HACKERS_REGISTRATION_FORM_LINK}>
             <Btn type="Register" overlay="Fill the form" />
           </a>
-          {FOOTER.VOLUNTEERING_FORM.required && (
+          {FOOTER.VOLUNTEERING_FORM?.required && (
             <a href={FOOTER.VOLUNTEERING_FORM.src}>
               <Btn type="Volunteer" class="Volunteer" overlay="Fill the form" />
             </a>
@@ -94,12 +58,13 @@ const Footer = () => {
         <div className="footer_info">
           <p>
             Contact us{' '}
-            <a href={SOCIALS.email}>
-              <em>{SOCIALS.mail}</em>
+            {/* Replace with your contact email or FOOTER.CONTACT_EMAIL */}
+            <a href={`mailto:${FOOTER.CONTACT_EMAIL || 'your@email.com'}`}>
+              <em>{FOOTER.CONTACT_EMAIL || 'your@email.com'}</em>
             </a>{' '}
           </p>
 
-          {FOOTER.Privacy_policy.required && (
+          {FOOTER.Privacy_policy?.required && (
             <a
               href={PrivacyPolicy}
               download
@@ -109,7 +74,7 @@ const Footer = () => {
               <p>Privacy Policy</p>
             </a>
           )}
-          {FOOTER.Terms_of_use.required && (
+          {FOOTER.Terms_of_use?.required && (
             <a
               href={TermsOfUse}
               download
