@@ -34,32 +34,23 @@ import Ryah from './Assets/teami/Ryah.jpg';
 import zoha from './Assets/teami/zoha.png';
 
 const TOP_SECTION = {
-  TITLE: 'Join Limbo Hacks',
-  Typed_effect: ['24 hours of creation', 'Win awesome prizes'],
+  TITLE: 'Reimagine Learning through Learning Analytics @ NTU Hackathon',
+  Typed_effect: ['Design the future of learning',
+    'Empower students with AI',
+    'Transform education at NTU'],
   SHORT_DESCRIPTION:
-    'Join us on 20th November 2021 with over 300 students from across the nation for 24 hours of creation, innovation, & fun.',
+    'Join us in collaboration with Imperial College London to innovate how students learn using AI, learning sciences, and analytics. Make a real impact on the NTU learning experience.',
   IMG_SRC: boy,
-  DISCORD_LINK: '',
   JUDGES_FORM_LINK:
     'https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__jZdNhdUNVRQMUg4VllMRURDN1lON0haNFVCQUgySC4u',
   HACKERS_REGISTRATION_FORM_LINK:
     'https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__jZdNhdUNTgyREk0VzdEMU9RVFlPMVNWVEJQUkNYMi4u'
 };
 
-const SOCIALS = {
-  instagram: 'https://www.instagram.com/limbohacks/',
-  discord: 'https://discord.com/invite/8XJSzmtWPp',
-  linkedin: 'https://www.linkedin.com/company/limbo-hacks/',
-  twitter: 'https://twitter.com/HacksLimbo',
-  devpost: 'https://limbo-hacks-12968.devpost.com/',
-  email: 'mailto:hello@limbohacks.tech',
-  mail: 'hello@limbohacks.tech'
-};
-
 const MIDDLE_SECTION = {
-  TITLE: 'What is Limbo hacks?',
+  TITLE: 'About the Hackathon',
   LONG_DESCRIPTION:
-    'Hack Limbo is 24 hour long running hackathon will be held on November 20th & 21th , We calls for hackers, artists, coders, designers, tech evangelists, creatives, and developers from all disciplines to take a part to win awesome prizes and collaborate with other developers . Throughout the weekend hackers at Limbo Hacks will have unique opportunities to learn from each other trying hands in new technologies We are determined to have an all-inclusive and diverse group of students attending.',
+    'Since late 2024, NTU has been piloting Project NALA (NTU AI Learning Assistants) — a university-wide initiative to transform how students learn with AI. This hackathon challenges you to design analytics solutions that help students become self-aware learners, ask better questions, plan their learning, and visualize progress. In collaboration with Imperial College London, dive into learning science, design thinking, and AI innovation to support effective learning at NTU.',
   LOGO: hackathonLogo
 };
 
@@ -93,64 +84,84 @@ const calenderStartingDate = {
   month: 12,
   year: 2021
 };
-
 const schedule = [
   {
-    day: '8-11-2021',
+    stage: "Pre-Hackathon",
     events: [
       {
-        title: 'Intro to phycycology',
-        timings: '12 AM - 1 Pm',
-        link: 'https://google.com'
-      }
-    ]
-  },
-  {
-    day: '5-12-2021',
-    events: [
-      {
-        title: 'Intro to deep learning',
-        timings: '12 AM - 1 Pm',
-        link: 'https://google.com'
+        title: "Hackathon Announcement",
+        timings: "4th Jul to 11th Jul",
+        description: "Official announcement of the hackathon and event details."
       },
       {
-        title: 'Intro to deep learning',
-        timings: '12 AM - 1 Pm',
-        link: 'https://google.com'
+        title: "Call for Participants",
+        timings: "14th Jul to 25th Jul",
+        description: "Registration opens for participants."
       }
     ]
   },
   {
-    day: '3-12-2021',
+    stage: "Stage 1: Ideation",
     events: [
       {
-        title: 'Intro to phycycology',
-        timings: '12 AM - 1 Pm',
-        link: 'https://google.com'
+        title: "Workshop by InsPIRE (Learning Sciences)",
+        timings: "4th & 5th Aug, 6:30pm–9:30pm",
+        description: "Interactive workshop on learning sciences."
+      },
+      {
+        title: "Workshop by ATLAS (Technical)",
+        timings: "6th Aug, 6:30pm–9:30pm",
+        description: "Technical workshop on integrating with NALA."
+      },
+      {
+        title: "Submission of Proposal (Deadline)",
+        timings: "15th Aug, 11:59pm",
+        description: "Deadline for teams to submit their learning analytics proposal."
+      },
+      {
+        title: "Evaluation",
+        timings: "18th–21st Aug",
+        description: "Judges review and evaluate submitted proposals."
+      },
+      {
+        title: "Announcement of Evaluation Results",
+        timings: "22nd Aug",
+        description: "Teams advancing to Stage 2 are announced."
       }
     ]
   },
   {
-    day: '1-12-2021',
+    stage: "Stage 2: Implementation",
     events: [
       {
-        title: 'Intro to deep learning',
-        timings: '12 AM - 1 Pm',
-        link: 'https://google.com'
+        title: "Development & Mentorship",
+        timings: "25th Aug to 30th Sep",
+        description: "Teams develop their solutions with guidance from mentors."
+      },
+      {
+        title: "Competition Day & Announcement of Winners",
+        timings: "1st Oct (Half Day)",
+        description: "Teams present their solutions; winners are announced."
       }
     ]
   },
   {
-    day: '1-1-2022',
+    stage: "Stage 3: Refinement & Conference",
     events: [
       {
-        title: 'Intro to phycycology',
-        timings: '12 AM - 1 Pm',
-        link: 'https://google.com'
+        title: "Refinement & Preparation for Joint Conference",
+        timings: "6th Oct to 4th Nov",
+        description: "Winning teams refine their solutions and prepare for the joint conference."
+      },
+      {
+        title: "Winners Presentation at Joint Conference with Imperial & Award Presentation",
+        timings: "5th Nov, 5pm onwards (3 hours, with dinner)",
+        description: "Winners present their solutions at the joint conference with Imperial College London."
       }
     ]
   }
 ];
+
 
 /** ICON
  *
@@ -166,109 +177,20 @@ const schedule = [
 
 const Prizeinfo = [
   [
-    //Array 1
     {
       icon: <i className="first fas fa-4x fa-trophy"></i>,
-      type: 'overall First',
-      content:
-        'First Overall prize will be given to a project that outstands all other submissions'
-    },
-    {
-      icon: <i className=" second fas fa-4x fa-medal"></i>,
-      type: 'overall Second',
-      content:
-        'Second Overall prize will be given to the second best project of the hackathon'
-    },
-    {
-      icon: <i className=" third fas fa-4x fa-skiing-nordic"></i>,
-      type: 'Third Second',
-      content:
-        'Best third overall project of the hackathon will win some awesome prizes'
-    }
-  ],
-  [
-    //Array 2
-    {
-      icon: <i className="fab fourth fa-3x fa-wpbeginner"></i>,
-      type: 'Best Solo',
-      content:
-        'You project will qualify for this prize if you participate alone without a team though we encourage you to participate with a team'
-    },
-    {
-      icon: <i className="first fas fa-4x fa-trophy"></i>,
-      type: ' Best Beginner',
-      content: 'Your project will qualify for this category if atleast 50% '
-    },
-    {
-      icon: <i className=" fifth fa-3x fas fa-book-open"></i>,
-      type: 'Best UI/UX',
-      content: 'Project with most creative designs will be UI/UX track'
-    }
-  ],
-  [
-    //Array 3
-    {
-      icon: <i className="fas fa-4x sixth fa-male"></i>,
-      type: 'Best Web App with Qoom',
-      content: 'Must use qoom in your project to win this category'
-    },
-    {
-      icon: <i className="fas fa-user-friends seventh fa-3x "></i>,
-      type: 'More prizes',
-      content: 'More prizes will be revealed later'
+      type: 'Top 3 Teams',
+      content: 'Winners will present their solutions at a joint conference with Imperial College London.'
     }
   ]
 ];
+
 
 /** Instructions
  * Insert only 3 or less then 3 members per array in `TeamInfo`, you can
  * create as many arrays you want all team members will be rendered
  * in a group of 3.
  */
-
-const TeamInfo = [
-  [
-    //Array 1
-    {
-      Name: 'Rehan',
-      role: 'Organizer',
-      github: 'https://github.com/Limbo-Hacks/Hackathon-website-template',
-      linkedin: '',
-      img: me
-    },
-    {
-      Name: 'Moon',
-      role: 'Organizer',
-      github: '',
-      linkedin: '',
-      img: moon
-    },
-    {
-      Name: 'Erika',
-      role: 'Organizer',
-      github: '',
-      linkedin: '',
-      img: Ryah
-    }
-  ],
-  [
-    //Array 2
-    {
-      Name: 'Lyanola',
-      role: 'Organizer',
-      github: '',
-      linkedin: '',
-      img: lyin
-    },
-    {
-      Name: 'Zoheb',
-      role: 'Organizer',
-      github: '',
-      linkedin: '',
-      img: zoha
-    }
-  ]
-];
 
 const JudgesInfo = [
   [
@@ -329,54 +251,50 @@ const sponsorLogos = [
 
 /** Instructions
  * Follow the strcuture provided below to add as many as FAQ's you want
- */
-const frequentlyAskedQuestions = [
+ */const frequentlyAskedQuestions = [
   [
     [
       {
-        label: 'What is a hackathon?',
+        label: 'What is the Reimagine Learning through Learning Analytics @ NTU Hackathon?',
         content:
-          'A hackathon is a 24 hour event where "hackers" all over the globe will collaborate on creating a functioning software and hardware by the end of the event.'
+          'It’s a collaborative hackathon between NTU and Imperial College London where students design innovative learning analytics solutions to empower self-aware learning using AI, learning sciences, and user interface design.'
       },
       {
-        label: 'Who can attend?',
+        label: 'Who can participate?',
         content:
-          'Limbo Hacks is open to all undergraduate, high school students and middle school students from all schools.'
+          'The hackathon is open to NTU students from all disciplines. Teams should preferably be interdisciplinary, with at least one member from CCDS.'
       },
       {
-        label: 'I am a first time hacker, what should I do?',
+        label: 'How do I register?',
         content:
-          'No worries, we love to welcome first time hackers and start their hacking journey from a hackathon. We have some awesome workshops and events which will help you get started with hackathon and hacking in general.'
+          'Register during the Call for Participants period by signing up through the official event form. Details will be provided on the event webpage.'
       },
       {
-        label: 'How team formation works?',
+        label: 'What are the stages of the competition?',
         content:
-          "You can form team with 4 members in it at maximum. If you don't have a team, there'll be plenty of opportunities for you to meet hackers and form a team!"
+          'There are three stages: Ideation (workshops and proposal submission), Implementation (solution development with mentorship), and Presentation (student voting and final presentations at a joint conference).'
       }
     ],
     [
       {
-        label: 'How to register myself in the hackathon?',
+        label: 'What skills or background do I need?',
         content:
-          'All you need is to fill our form above and join Discord, we will guide you through everything there'
+          'No prior hackathon experience is required. Participants from all backgrounds—learning sciences, AI, design, or tech—are welcome. Workshops will help you get started.'
       },
       {
-        label: 'I have more questions?',
+        label: 'How are winners selected?',
         content:
-          'Reach us directly at (rehan@limbohacks.tech or hello@limbohacks.tech) we would happy to help you.'
+          'Finalists are chosen based on proposal evaluation, solution implementation, and presentations. Both student votes and faculty judges contribute to the final decision.'
       },
       {
-        label: 'Can i volunteer?',
+        label: 'What do winners receive?',
         content:
-          'Yes we are actively looking for volunteers, fill the form (in footer section) we will be glad to have you.'
-      },
-      {
-        label: 'Will there be swag?',
-        content: 'Yes! Participants will recieveing Limbo Hacks swag!.'
+          'Top teams will present at a joint conference with Imperial College London and have their solutions considered for integration into NTU’s NALA platform.'
       }
     ]
   ]
 ];
+
 
 export {
   TOP_SECTION,
