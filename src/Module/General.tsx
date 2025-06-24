@@ -19,19 +19,12 @@ import qoom from './Assets/sponsorsLogos/qoom.svg';
 import Replit from './Assets/sponsorsLogos/replit.png';
 import sublime from './Assets/sponsorsLogos/sublime.png';
 import taskade from './Assets/sponsorsLogos/taskade.png';
-import lyin from './Assets/teami/lyin.jpg';
 
 /** Put all your sponsors logo inside folder `sponsorLogos`
  * and import them in the above and update `src` in sponsorLogos
  * or you can provide a cloud link in src
  */
 
-// Importing all Team members images  from Assets
-
-import me from './Assets/teami/me.png';
-import moon from './Assets/teami/moon.png';
-import Ryah from './Assets/teami/Ryah.jpg';
-import zoha from './Assets/teami/zoha.png';
 
 const TOP_SECTION = {
   TITLE: 'Reimagine Learning through Learning Analytics @ NTU Hackathon',
@@ -62,14 +55,6 @@ const FOOTER = {
   JOIN_TEAM: {
     required: true,
     src: 'https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__jZdNhdUOUhEQkJSRk02OEU4SlBMTUdYOFIxOTNZSy4u'
-  },
-  Privacy_policy: {
-    required: true,
-    src: ''
-  },
-  Terms_of_use: {
-    required: true,
-    src: ''
   }
 };
 
@@ -81,9 +66,10 @@ const FOOTER = {
  */
 
 const calenderStartingDate = {
-  month: 6,
+  month: 7,
   year: 2025
 };
+// Original schedule for display
 const schedule = [
   {
     stage: "Pre-Hackathon",
@@ -159,6 +145,58 @@ const schedule = [
         description: "Winners present their solutions at the joint conference with Imperial College London."
       }
     ]
+  }
+];
+
+// Calendar events for use in your calendar component
+const calendarEvents = [
+  {
+    title: "Hackathon Announcement",
+    start: "2025-07-04",
+    end: "2025-07-11",
+    description: "Official announcement of the hackathon and event details."
+  },
+  {
+    title: "Call for Participants",
+    start: "2025-07-14",
+    end: "2025-07-25",
+    description: "Registration opens for participants."
+  },
+  {
+    title: "Workshop by ATLAS (Technical)",
+    start: "2025-08-06",
+    end: "2025-08-06",
+    description: "Technical workshop on integrating with NALA."
+  },
+  {
+    title: "Submission of Proposal (Deadline)",
+    start: "2025-08-15",
+    end: "2025-08-15",
+    description: "Deadline for teams to submit their learning analytics proposal."
+  },
+  {
+    title: "Announcement of Evaluation Results",
+    start: "2025-08-22",
+    end: "2025-08-22",
+    description: "Teams advancing to Stage 2 are announced."
+  },
+  {
+    title: "Development & Mentorship",
+    start: "2025-08-25",
+    end: "2025-09-30",
+    description: "Teams develop their solutions with guidance from mentors."
+  },
+  {
+    title: "Refinement & Preparation for Joint Conference",
+    start: "2025-10-06",
+    end: "2025-11-04",
+    description: "Winning teams refine their solutions and prepare for the joint conference."
+  },
+  {
+    title: "Winners Presentation at Joint Conference with Imperial & Award Presentation",
+    start: "2025-11-05",
+    end: "2025-11-05",
+    description: "Winners present their solutions at the joint conference with Imperial College London."
   }
 ];
 
@@ -252,7 +290,7 @@ export {
   FOOTER,
   Prizeinfo,
   sponsorLogos,
-  frequentlyAskedQuestions,
-  schedule,
+  schedule,            // for display
+  calendarEvents,      // for calendar component
   calenderStartingDate
 };
