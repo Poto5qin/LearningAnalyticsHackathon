@@ -9,21 +9,15 @@ import Birds from '../../components/Animation';
 import Footer from '../../components/Footer/index.jsx';
 import {Myinfo} from '../../components/Landing/index.jsx';
 import {FirstPrize, PrizeHeading} from '../../components/Prizes/index.jsx';
-// import Media from '../../components/Socials/index.jsx';  // <-- REMOVED
 import {
   Sponsor,
   SponsorsHead,
   SponsorUS
 } from '../../components/Sponsors/sponsors.jsx';
-import {JoinTeam, Member} from '../../components/Team';
 import {
-  FOOTER,
   frequentlyAskedQuestions,
-  JudgesInfo,
   Prizeinfo,
-  sponsorLogos,
-  // TeamInfo,   // <-- REMOVED
-  TOP_SECTION
+  sponsorLogos
 } from '../../Module/General';
 import MyCalender from '../calender';
 import './about.css';
@@ -60,16 +54,6 @@ const SponsorGroup = (props, index) => (
   </Row>
 );
 
-const TeamMembers = (props, index) => (
-  <Row key={index} className="members">
-    {props.map((s, i) => (
-      <Col key={i} className="" sm={12} lg={4} md={4}>
-        <Member info={s} />
-      </Col>
-    ))}
-  </Row>
-);
-
 export default function HomePage() {
   const [media, setMedia] = useState();
   UseMedia('min-width', 1000, setMedia);
@@ -86,7 +70,6 @@ export default function HomePage() {
               <MyCalender />
             </Col>
           </Row>
-          {/* Media section removed */}
         </Container>
       </div>
       <Container fluid>
@@ -112,11 +95,6 @@ export default function HomePage() {
         </Row>
         {/* ********Prizes ending here ***** */}
 
-        <Row className="prizesection non-coding">
-          <PrizeHeading type="Non-coding prizes" />
-          <h2>coming soon</h2>
-        </Row>
-
         {/* ********Sponsors here ***** */}
         <Row className="sponsorSection" id="sponsors">
           <SponsorsHead />
@@ -126,30 +104,6 @@ export default function HomePage() {
         {/* ********Sponsors ending here ***** */}
 
         {media && <Birds top="120vh" left="0vh" type="" />}
-
-        {/* ********Team here ***** */}
-        <h1 id="team">Our Team</h1>
-        {FOOTER.JOIN_TEAM.required && (
-          <JoinTeam
-            placeholder="Join our team"
-            formLink={FOOTER.JOIN_TEAM}
-            content="Interested in joining our team"
-          />
-        )}
-        {/* {TeamInfo.map(TeamMembers)}  <-- REMOVED */}
-        {/* ********Team ending here ***** */}
-
-        {/* ********Judges here ***** */}
-        <h1 id="team">Judges</h1>
-        {FOOTER.JOIN_TEAM.required && (
-          <JoinTeam
-            placeholder="Join our team"
-            formLink={TOP_SECTION.JUDGES_FORM_LINK}
-            content="Interested in being judge"
-          />
-        )}
-        {JudgesInfo.map(TeamMembers)}
-        {/* ********Team ending here ***** */}
       </Container>
       <Footer />
     </div>
