@@ -81,8 +81,8 @@ const FOOTER = {
  */
 
 const calenderStartingDate = {
-  month: 12,
-  year: 2021
+  month: 6,
+  year: 2025
 };
 const schedule = [
   {
@@ -90,12 +90,12 @@ const schedule = [
     events: [
       {
         title: "Hackathon Announcement",
-        timings: "4th Jul to 11th Jul",
+        timings: "4th Jul 2025 to 11th Jul 2025",
         description: "Official announcement of the hackathon and event details."
       },
       {
         title: "Call for Participants",
-        timings: "14th Jul to 25th Jul",
+        timings: "14th Jul 2025 to 25th Jul 2025",
         description: "Registration opens for participants."
       }
     ]
@@ -105,27 +105,27 @@ const schedule = [
     events: [
       {
         title: "Workshop by InsPIRE (Learning Sciences)",
-        timings: "4th & 5th Aug, 6:30pm–9:30pm",
+        timings: "4th & 5th Aug 2025, 6:30pm–9:30pm",
         description: "Interactive workshop on learning sciences."
       },
       {
         title: "Workshop by ATLAS (Technical)",
-        timings: "6th Aug, 6:30pm–9:30pm",
+        timings: "6th Aug 2025, 6:30pm–9:30pm",
         description: "Technical workshop on integrating with NALA."
       },
       {
         title: "Submission of Proposal (Deadline)",
-        timings: "15th Aug, 11:59pm",
+        timings: "15th Aug 2025, 11:59pm",
         description: "Deadline for teams to submit their learning analytics proposal."
       },
       {
         title: "Evaluation",
-        timings: "18th–21st Aug",
+        timings: "18th–21st Aug 2025",
         description: "Judges review and evaluate submitted proposals."
       },
       {
         title: "Announcement of Evaluation Results",
-        timings: "22nd Aug",
+        timings: "22nd Aug 2025",
         description: "Teams advancing to Stage 2 are announced."
       }
     ]
@@ -135,12 +135,12 @@ const schedule = [
     events: [
       {
         title: "Development & Mentorship",
-        timings: "25th Aug to 30th Sep",
+        timings: "25th Aug 2025 to 30th Sep 2025",
         description: "Teams develop their solutions with guidance from mentors."
       },
       {
         title: "Competition Day & Announcement of Winners",
-        timings: "1st Oct (Half Day)",
+        timings: "1st Oct 2025 (Half Day)",
         description: "Teams present their solutions; winners are announced."
       }
     ]
@@ -150,12 +150,12 @@ const schedule = [
     events: [
       {
         title: "Refinement & Preparation for Joint Conference",
-        timings: "6th Oct to 4th Nov",
+        timings: "6th Oct 2025 to 4th Nov 2025",
         description: "Winning teams refine their solutions and prepare for the joint conference."
       },
       {
         title: "Winners Presentation at Joint Conference with Imperial & Award Presentation",
-        timings: "5th Nov, 5pm onwards (3 hours, with dinner)",
+        timings: "5th Nov 2025, 5pm onwards (3 hours, with dinner)",
         description: "Winners present their solutions at the joint conference with Imperial College London."
       }
     ]
@@ -185,56 +185,6 @@ const Prizeinfo = [
   ]
 ];
 
-
-/** Instructions
- * Insert only 3 or less then 3 members per array in `TeamInfo`, you can
- * create as many arrays you want all team members will be rendered
- * in a group of 3.
- */
-
-const JudgesInfo = [
-  [
-    //Array 1
-    {
-      Name: 'Rehan',
-      role: 'Organizer',
-      github: '',
-      linkedin: '',
-      img: me
-    },
-    {
-      Name: 'Moon',
-      role: 'Organizer',
-      github: '',
-      linkedin: '',
-      img: moon
-    },
-    {
-      Name: 'Ryah Garcia',
-      role: 'Organizer',
-      github: '',
-      linkedin: '',
-      img: Ryah
-    }
-  ],
-  [
-    //Array 2
-    {
-      Name: 'Lyanola',
-      role: 'Organizer',
-      github: '',
-      linkedin: '',
-      img: lyin
-    },
-    {
-      Name: 'Zoheb',
-      role: 'Organizer',
-      github: '',
-      linkedin: '',
-      img: zoha
-    }
-  ]
-];
 
 /** Instructions
  * Only put 3 logos per array inside `sponsorLogos`, you can
@@ -302,7 +252,6 @@ export {
   FOOTER,
   Prizeinfo,
   sponsorLogos,
-  JudgesInfo,
   frequentlyAskedQuestions,
   schedule,
   calenderStartingDate
