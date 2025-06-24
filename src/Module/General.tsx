@@ -290,6 +290,7 @@ export {
   FOOTER,
   Prizeinfo,
   sponsorLogos,
+   frequentlyAskedQuestions,
   schedule,            // for display
   calendarEvents,      // for calendar component
   calenderStartingDate
