@@ -296,7 +296,7 @@ interface ScheduleStage {
   events: ScheduleEvent[];
 }
 
-function getCalendarDataFromSchedule(schedule) {
+function getCalendarDataFromSchedule(schedule: ScheduleStage[]) {
   const calendarData = [];
   const months = [
     'january', 'february', 'march', 'april', 'may', 'june',
