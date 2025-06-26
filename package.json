@@ -1,6 +1,4 @@
-#Defines project’s metadata (name, version, description, repository, etc.).
-#Lists all dependencies (libraries and packages) your project needs to run and develop.
-#Specifies scripts for common tasks
+
 {
   "name": "ntu-learning-analytics-hackathon",
   "version": "0.1.0",
