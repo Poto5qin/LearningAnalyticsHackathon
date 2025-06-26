@@ -1,5 +1,6 @@
+
 import {useEffect, useRef, useState} from 'react';
-import {HashRouter as Router, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import {HashLink as Link} from 'react-router-hash-link';
 import styled from 'styled-components';
 import HomePage from '../Home/HomePage';
@@ -29,6 +30,27 @@ const Wrapper = styled.div`
     }
   }
 `;
+
+// const MdxContent = () => {
+//   return (
+//     <div
+//       style={{
+//         backgroundColor: 'red'
+//       }}
+//     >
+//       <h1>This is blog</h1>
+//       <h1>This is blog</h1>
+//       <h1>This is blog</h1>
+//       <h1>This is blog</h1>
+//       <h1>This is blog</h1>
+//       <h1>This is blog</h1>
+//       <h1>This is blog</h1>
+//       <h1>This is blog</h1>
+//       <h1>This is blog</h1>
+
+//     </div>
+//   );
+// };
 
 const NAVBAR = ({}) => {
   const [toggle, setToggle] = useState(true);
@@ -77,34 +99,33 @@ const NAVBAR = ({}) => {
             <ul>
               <li>
                 <Link to={`#home`}>
-                  <span className="links">Home </span>
+                  <span className="links">Home </span>{' '}
                 </Link>
               </li>
               <li>
                 <Link to={`#faq`}>
-                  <span className="links">FAQ </span>
+                  <span className="links">FAQ </span>{' '}
                 </Link>
               </li>
               <li>
                 <Link to={`#prizes`}>
-                  <span className="links">prizes </span>
+                  <span className="links">prizes </span>{' '}
                 </Link>
               </li>
               <li>
                 <Link to={`#sponsors`}>
-                  <span className="links">sponsors </span>
+                  <span className="links">sponsors </span>{' '}
                 </Link>
               </li>
               <li>
                 <Link to={`#team`}>
-                  <span className="links">team </span>
+                  <span className="links">team </span>{' '}
                 </Link>
               </li>
               <img
                 className="s-close"
                 onClick={() => setToggle(true)}
                 src={logoClose}
-                alt="Close menu"
               />
             </ul>
           </div>
@@ -114,7 +135,6 @@ const NAVBAR = ({}) => {
           className="s-open"
           onClick={() => setToggle(false)}
           src={hamLogo}
-          alt="Open menu"
         />
       </nav>
 
