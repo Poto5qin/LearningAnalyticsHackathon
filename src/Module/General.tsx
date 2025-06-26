@@ -285,6 +285,50 @@ const Prizeinfo = [
   ]
 ];
 
+function getCalendarDataFromSchedule(schedule) {
+  const calendarData = [];
+  const months = [
+    'january', 'february', 'march', 'april', 'may', 'june',
+    'july', 'august', 'september', 'october', 'november', 'december'
+  ];
+
+  schedule.forEach(stage => {
+    stage.events.forEach(event => {
+      // Match all dates like "4th Jul 2025" or "15th Aug 2025"
+      const dateRegex = /(\d{1,2})[a-z]{2} (\w+) (\d{4})/gi;
+      let match;
+      let dates = [];
+
+      while ((match = dateRegex.exec(event.timings)) !== null) {
+        const day = parseInt(match[1], 10);
+        const monthStr = match[2].toLowerCase();
+        const year = parseInt(match[3], 10);
+        const month = months.indexOf(monthStr) + 1;
+        if (month > 0) {
+          dates.push({ day, month, year });
+        }
+      }
+
+      // For each date found, add or update the calendarData array
+      dates.forEach(dateObj => {
+        const dateString = `${dateObj.day}-${dateObj.month}-${dateObj.year}`;
+        let existing = calendarData.find(d => d.day === dateString);
+        if (!existing) {
+          existing = { day: dateString, events: [] };
+          calendarData.push(existing);
+        }
+        existing.events.push({
+          title: event.title,
+          timings: event.timings,
+          description: event.description
+        });
+      });
+    });
+  });
+
+  return calendarData;
+}
+
 
 export {
   TOP_SECTION,
@@ -293,6 +337,7 @@ export {
   Prizeinfo,
    frequentlyAskedQuestions,
   schedule,            // for display
+  getCalendarDataFromSchedule,
   calendarEvents,      // for calendar component
   calenderStartingDate
 };
