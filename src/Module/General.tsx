@@ -7,7 +7,7 @@ import hackathonLogo from './Assets/hackathonLogo.png';
  */
 
 import boy from './Assets/boy.png';
-import pass from './Assets/sponsorsLogos/1pass.png';
+/*import pass from './Assets/sponsorsLogos/1pass.png';
 import ACF from './Assets/sponsorsLogos/ACF.png';
 import cfc from './Assets/sponsorsLogos/cfc.png';
 import echoAR from './Assets/sponsorsLogos/echoAR.png';
@@ -17,8 +17,9 @@ import interviewC from './Assets/sponsorsLogos/interview-cake.jpg';
 import ll from './Assets/sponsorsLogos/ll.png';
 import qoom from './Assets/sponsorsLogos/qoom.svg';
 import Replit from './Assets/sponsorsLogos/replit.png';
-import sublime from './Assets/sponsorsLogos/sublime.png';
+//import sublime from './Assets/sponsorsLogos/sublime.png';
 import taskade from './Assets/sponsorsLogos/taskade.png';
+*/
 
 /** Put all your sponsors logo inside folder `sponsorLogos`
  * and import them in the above and update `src` in sponsorLogos
@@ -152,50 +153,50 @@ const schedule = [
 const calendarEvents = [
   {
     title: "Hackathon Announcement",
-    start: "2025-07-04",
-    end: "2025-07-11",
+    start: new Date(2025, 6, 4),  // July is 6 (0-indexed)
+    end: new Date(2025, 6, 11),
     description: "Official announcement of the hackathon and event details."
   },
   {
     title: "Call for Participants",
-    start: "2025-07-14",
-    end: "2025-07-25",
+    start: new Date(2025, 6, 14),
+    end: new Date(2025, 6, 25),
     description: "Registration opens for participants."
   },
   {
     title: "Workshop by ATLAS (Technical)",
-    start: "2025-08-06",
-    end: "2025-08-06",
+    start: new Date(2025, 7, 6),
+    end: new Date(2025, 7, 6),
     description: "Technical workshop on integrating with NALA."
   },
   {
     title: "Submission of Proposal (Deadline)",
-    start: "2025-08-15",
-    end: "2025-08-15",
+    start: new Date(2025, 7, 15),
+    end: new Date(2025, 7, 15),
     description: "Deadline for teams to submit their learning analytics proposal."
   },
   {
     title: "Announcement of Evaluation Results",
-    start: "2025-08-22",
-    end: "2025-08-22",
+    start: new Date(2025, 7, 22),
+    end: new Date(2025, 7, 22),
     description: "Teams advancing to Stage 2 are announced."
   },
   {
     title: "Development & Mentorship",
-    start: "2025-08-25",
-    end: "2025-09-30",
+    start: new Date(2025, 7, 25),
+    end: new Date(2025, 8, 30),
     description: "Teams develop their solutions with guidance from mentors."
   },
   {
     title: "Refinement & Preparation for Joint Conference",
-    start: "2025-10-06",
-    end: "2025-11-04",
+    start: new Date(2025, 9, 6),
+    end: new Date(2025, 10, 4),
     description: "Winning teams refine their solutions and prepare for the joint conference."
   },
   {
     title: "Winners Presentation at Joint Conference with Imperial & Award Presentation",
-    start: "2025-11-05",
-    end: "2025-11-05",
+    start: new Date(2025, 10, 5),
+    end: new Date(2025, 10, 5),
     description: "Winners present their solutions at the joint conference with Imperial College London."
   }
 ];
@@ -230,12 +231,13 @@ const Prizeinfo = [
  * in a group of 3.
  */
 
-const sponsorLogos = [
+/*const sponsorLogos = [
   [{src: cfc}, {src: sublime}, {src: echoAR}], //Array 1
   [{src: taskade}, {src: Replit}, {src: qoom}], //Array 2
   [{src: interviewC}, {src: pass}, {src: glimpse}], //Array 3
   [{src: egg}, {src: ll}, {src: ACF}] //Array 4
 ];
+*/
 
 /** Instructions
  * Follow the strcuture provided below to add as many as FAQ's you want
@@ -289,7 +291,6 @@ export {
   MIDDLE_SECTION,
   FOOTER,
   Prizeinfo,
-  sponsorLogos,
    frequentlyAskedQuestions,
   schedule,            // for display
   calendarEvents,      // for calendar component
