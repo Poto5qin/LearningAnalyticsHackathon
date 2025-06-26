@@ -1,8 +1,10 @@
-
+ 
 {
   "name": "ntu-learning-analytics-hackathon",
   "version": "0.1.0",
   "private": true,
+  "private": true,
+  "homepage": "https://Poto5qin.github.io/LearningAnalyticsHackathon",
   "dependencies": {
     "@babel/plugin-syntax-jsx": "^7.18.6",
     "@mdx-js/loader": "^1.6.22",
@@ -37,6 +39,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "prepare": "husky install"
   },
