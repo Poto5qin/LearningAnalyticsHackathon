@@ -1,5 +1,8 @@
+#Defines project’s metadata (name, version, description, repository, etc.).
+#Lists all dependencies (libraries and packages) your project needs to run and develop.
+#Specifies scripts for common tasks
 {
-  "name": "hackathon-website-template",
+  "name": "ntu-learning-analytics-hackathon",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -63,15 +66,15 @@
     "gh-pages": "^3.2.3",
     "husky": "^7.0.0"
   },
-  "description": "### Thanks [ella](https://github.com/eilla1) for design snippets",
+  "description": "### NTU Learning Analytics Hackathon 2025 website",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Limbo-Hacks/Limbo-hacks-website.git"
+    "url": "https://github.com/Poto5qin/LearningAnalyticsHackathon.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Limbo-Hacks/Limbo-hacks-website/issues"
+    "url": "https://github.com/Poto5qin/LearningAnalyticsHackathon/issues"
   }
 }
