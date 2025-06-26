@@ -12,12 +12,10 @@
 
 ## Table of Contents
 
-- [Sections]()
 - [Getting started]()
 - [Change and Customize]()
 - [Deployment]()
 - [Technologies Used]()
-- [Contributors]()
 
 ---
 
