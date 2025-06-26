@@ -285,6 +285,17 @@ const Prizeinfo = [
   ]
 ];
 
+interface ScheduleEvent {
+  title: string;
+  timings: string;
+  description: string;
+}
+
+interface ScheduleStage {
+  stage: string;
+  events: ScheduleEvent[];
+}
+
 function getCalendarDataFromSchedule(schedule) {
   const calendarData = [];
   const months = [
