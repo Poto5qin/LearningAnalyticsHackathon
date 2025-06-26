@@ -9,11 +9,11 @@ import Birds from '../../components/Animation';
 import Footer from '../../components/Footer/index.jsx';
 import {Myinfo} from '../../components/Landing/index.jsx';
 import {FirstPrize, PrizeHeading} from '../../components/Prizes/index.jsx';
-import {
+/*import {
   Sponsor,
   SponsorsHead,
   SponsorUS
-} from '../../components/Sponsors/sponsors.jsx';
+} from '../../components/Sponsors/sponsors.jsx';*/
 import {
   frequentlyAskedQuestions,
   Prizeinfo,
@@ -44,7 +44,7 @@ const PrizeGroup = (props, index) => (
   </Row>
 );
 
-const SponsorGroup = (props, index) => (
+/*const SponsorGroup = (props, index) => (
   <Row key={index}>
     {props.map((s, i) => (
       <Col key={i} className="" sm={12} lg={4} md={6}>
@@ -52,7 +52,7 @@ const SponsorGroup = (props, index) => (
       </Col>
     ))}
   </Row>
-);
+);*/
 
 export default function HomePage() {
   const [media, setMedia] = useState();
@@ -95,13 +95,6 @@ export default function HomePage() {
         </Row>
         {/* ********Prizes ending here ***** */}
 
-        {/* ********Sponsors here ***** */}
-        <Row className="sponsorSection" id="sponsors">
-          <SponsorsHead />
-          <SponsorUS />
-          {sponsorLogos.map(SponsorGroup)}
-        </Row>
-        {/* ********Sponsors ending here ***** */}
 
         {media && <Birds top="120vh" left="0vh" type="" />}
       </Container>
