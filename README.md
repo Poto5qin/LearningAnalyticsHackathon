@@ -1,17 +1,3 @@
-# Hackathon website Folio template ⚡️
-
-![](https://img.shields.io/github/repo-size/Limbo-Hacks/Hackathon-website-template)
-![](https://img.shields.io/github/commit-activity/m/Limbo-Hacks/Hackathon-website-template)
-
-## A clean, beautiful and mobile responsive portfolio template for your upcoming hackathon!
-
-#### Demo view
-
-![gifs](https://github.com/Limbo-Hacks/Hackathon-website-template/blob/main/Resources/Screen%20Recording%202021-08-14%20at%2010.42.16%20PM.gif)
-
-**For help you can join our discord [click here](https://discord.com/invite/8XJSzmtWPp)**
-
-Just change `src/Module/general.js` to get your hackathon portfolio. Customize and your sponsors, team-member and judges by adding images in `src/Module/Assets` . Feel free to use it as-is or personalize it as much as you want.
 
 ## [Prerequisites]()
 
@@ -35,33 +21,6 @@ Just change `src/Module/general.js` to get your hackathon portfolio. Customize a
 
 ---
 
-## [Website Sections]()
-
-✔️ General hackathon Info.
-
-✔️ Hackathon calender with schedule.
-
-✔️ Registrations links.
-
-✔️ Socials.
-
-✔️ Description and logo.
-
-✔️ Frequently asked questions.
-
-✔️ Prize section.
-
-✔️ Sponsors & Partners.
-
-✔️ Judges.
-
-✔️ Volunteers.
-
-✔️ Organizers.
-
-✔️ Footer
-
-To view a live example, [click here](https://limbohacks.tech).
 
 ## [Getting Started]()
 
@@ -153,19 +112,6 @@ const TOP_SECTION = {
   HACKERS_REGISTRATION_FORM_LINK:""
 };
 
-
-
-
-/* Add all your social media handels*/
-const SOCIALS = {
-  instagram: "https://www.instagram.com/limbohacks/",
-  discord: "https://discord.com/invite/8XJSzmtWPp",
-  linkedin: "https://www.linkedin.com/company/limbo-hacks/",
-  twitter: "https://twitter.com/HacksLimbo",
-  devpost: "https://limbo-hacks-12968.devpost.com/",
-  email: "mailto:hello@limbohacks.tech",
-  mail:"hello@limbohacks.tech"
-};
 
 
 
