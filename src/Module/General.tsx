@@ -296,8 +296,19 @@ interface ScheduleStage {
   events: ScheduleEvent[];
 }
 
-function getCalendarDataFromSchedule(schedule: ScheduleStage[]) {
-  const calendarData = [];
+interface CalendarEvent {
+  title: string;
+  timings: string;
+  description: string;
+}
+
+interface CalendarDay {
+  day: string;
+  events: CalendarEvent[];
+}
+
+function getCalendarDataFromSchedule(schedule: ScheduleStage[]): CalendarDay[] {
+  const calendarData: CalendarDay[] = [];
   const months = [
     'january', 'february', 'march', 'april', 'may', 'june',
     'july', 'august', 'september', 'october', 'november', 'december'
